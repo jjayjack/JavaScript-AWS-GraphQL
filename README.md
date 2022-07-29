@@ -42,3 +42,5 @@ Blueprint that sets up types and relationships between types
 5. [Express](https://expressjs.com/)
 
 6. [nodemon](https://www.npmjs.com/package/nodemon)
+
+7. [Lodash](https://lodash.com/)
