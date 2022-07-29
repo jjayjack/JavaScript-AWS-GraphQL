@@ -1,5 +1,9 @@
 # JavaScript-AWS-NestJS-GraphQL
 
+### Schema
+
+Blueprint that sets up types and relationships between types
+
 ### Resources
 
 1. [NodeJS](https://nodejs.org/en/)
