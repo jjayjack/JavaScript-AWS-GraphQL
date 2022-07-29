@@ -10,6 +10,7 @@ Blueprint that sets up types and relationships between types
 
 2. [AWS Amplify CLI](https://docs.amplify.aws/)
    Amplify configuration: - `amplify configure`
+
    a. region - set based on location
 
    b. user name (IAM user) - user management
