@@ -1,14 +1,14 @@
 const graphql = require("graphql");
 
-const { GraphQLObjectType } = graphql;
+const { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLInt } = graphql;
 
 // Create types
 const userType = new GraphQLObjectType({
   name: "User",
   description: "Documentation for user",
   fields: () => ({
-    id: "123",
-    name: "James",
-    age: 34,
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    age: { type: GraphQLInt },
   }),
 });
