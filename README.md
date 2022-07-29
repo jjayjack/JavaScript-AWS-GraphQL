@@ -21,7 +21,7 @@
    f. Profile Name: type custom or enter for `default`
    `Successfully set up the new user`
 
-3. [GraphQL]()
+3. [GraphQL](https://www.npmjs.com/package/graphql)
 4. [Express-GraphQL](https://github.com/graphql/express-graphql)
 5. [Express](https://expressjs.com/)
 6. [nodemon](https://www.npmjs.com/package/nodemon)
