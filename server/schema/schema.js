@@ -20,34 +20,40 @@ var hobbiesData = [
 	{
 		id: "1",
 		title: "Programming",
-		description: "Using computers to create cool things"
+		description: "Using computers to create cool things",
+		userId: "19"
 	},
 	{
 		id: "2",
 		title: "Cooking",
-		description: "Stoves and grills are cool"
+		description: "Stoves and grills are cool",
+		userId: "211"
 	},
 	{
 		id: "3",
 		title: "Swimming",
-		description: "Water is cool"
+		description: "Water is cool",
+		userId: "13"
 	},
 	{
 		id: "4",
 		title: "Hiking",
-		description: "Nature is cool"
+		description: "Nature is cool",
+		userId: "1"
 	},
 	{
 		id: "1",
 		title: "Playing with dogs",
-		description: "Dogs are cool"
+		description: "Dogs are cool",
+		userId: "19"
 	}
 ];
 
 var postsData = [
 	{ id: "1", comment: "This is great", userId: "1" },
 	{ id: "12", comment: "Awesome", userId: "211" },
-	{ id: "120", comment: "WOWOWOW", userId: "1" }
+	{ id: "120", comment: "WOWOWOW", userId: "1" },
+	{ id: "64", comment: "My trip at the lake!", userId: "19" }
 ];
 
 const UserType = new GraphQLObjectType({
@@ -67,7 +73,13 @@ const HobbyType = new GraphQLObjectType({
 	fields: () => ({
 		id: { type: GraphQLID },
 		title: { type: GraphQLString },
-		description: { type: GraphQLString }
+		description: { type: GraphQLString },
+		user: {
+			type: UserType,
+			resolve(parent, args) {
+				return _.find(usersData, { id: parent.userId });
+			}
+		}
 	})
 });
 
