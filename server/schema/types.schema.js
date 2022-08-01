@@ -36,14 +36,14 @@ const RootQuery = new GraphQLObjectType({
 	fields: {
 		person: {
 			type: Person,
-			resolve(parent, args) {
-				let personObject = {
+			resolve(parent, _) {
+				let personObj = {
 					name: "Anthony",
 					age: 27,
-					isMarried: false,
+					isMarried: true,
 					gpa: 3.75
 				};
-				return personObject;
+				return personObj;
 			}
 		}
 	}
