@@ -165,7 +165,7 @@ const RootQuery = new GraphQLObjectType({
 			}
 		},
 		posts: {
-			type: newGraphQLList(PostType),
+			type: new GraphQLList(PostType),
 			resolve(parent, args) {
 				return postsData;
 			}
