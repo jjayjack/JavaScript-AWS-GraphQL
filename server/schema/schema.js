@@ -56,7 +56,7 @@ const HobbyType = new GraphQLObjectType({
 
 const PostType = new GraphQLObjectType({
 	name: "Post",
-	description: "Posts for users",
+	description: "Posts description",
 	fields: () => ({
 		id: { type: GraphQLID },
 		comment: { type: GraphQLString },
