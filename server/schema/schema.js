@@ -141,11 +141,11 @@ const Mutation = new GraphQLObjectType({
 				profession: { type: GraphQLString }
 			},
 			resolve(parent, args) {
-				let user = {
+				let user = User({
 					name: args.name,
 					age: args.age,
 					profession: args.profession
-				};
+				});
 				return user;
 			}
 		},
