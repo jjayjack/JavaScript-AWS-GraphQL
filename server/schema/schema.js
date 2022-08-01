@@ -146,7 +146,7 @@ const Mutation = new GraphQLObjectType({
 					age: args.age,
 					profession: args.profession
 				});
-				return user;
+				return user.save();
 			}
 		},
 		createPost: {
