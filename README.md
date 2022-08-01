@@ -34,6 +34,17 @@ Contains a table structure which contains columns and rows. Focused on the _rela
 **MongoDB**
 Main benefit is use of _collections_ which contain different _documents_.
 
+Connecting MongoDB to Application:
+Creating a new JSON file with credentials we can connect online database to application. We will want to store these values in a private file to create a level of security. The file will be in JSON format as:
+
+      {"env":
+         {
+            "mongoDatabase": "YOUR_DATABASE_NAME",
+            "mongoUserName": "YOUR_MONGODB_USERNAME",
+            "mongoUserPassword": "YOUR_MONGODB_PASSWORD"
+         }
+      }
+
 ### Resources
 
 1. [NodeJS](https://nodejs.org/en/)
@@ -76,3 +87,5 @@ Main benefit is use of _collections_ which contain different _documents_.
 7. [Lodash](https://lodash.com/)
 
 8. [MongoDB](https://www.mongodb.com/)
+
+9. [Mongoose](https://mongoosejs.com/)
