@@ -1,12 +1,14 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
 
 const schema = require("./schema/schema");
 const testSchema = require("./schema/types.schema");
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
+
 app.use(
 	"/graphql",
 	graphqlHTTP({
@@ -16,12 +18,14 @@ app.use(
 );
 
 mongoose
-	.connect(
-		`mongodb+srv://${process.env.mongoUserName}:<${process.env.mongoUserPassword}>@clustergraphql.ffvmskm.mongodb.net/${process.env.mongoDatabase}?retryWrites=true&w=majority`,
-		{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
-	)
+	.connect(process.env.MONGODB_URI, {
+		dbName: process.env.DB_NAME,
+		user: process.env.DB_USERNAME,
+		pass: process.env.DB_PASSWORD
+	})
 	.then(() => {
 		app.listen({ port: port }, () => {
 			console.log("listening for requests on " + port);
 		});
-	});
+	})
+	.catch((error) => console.log(error));
