@@ -23,6 +23,9 @@ Connected to GraphQL with objects:
 **ID**
 `GraphQLID`
 
+**NonNull**
+`GraphQLNonNull (YOUR_NON_NULL_FIELD)`
+
 ### Resources
 
 1. [NodeJS](https://nodejs.org/en/)
