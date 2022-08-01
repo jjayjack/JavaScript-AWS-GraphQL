@@ -3,8 +3,8 @@ const { graphqlHTTP } = require("express-graphql");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 
-const schema = require("./schema/schema");
-const testSchema = require("./schema/types.schema");
+const schema = require("./server/schema/schema");
+const testSchema = require("./server/schema/types.schema");
 
 const app = express();
 const port = process.env.PORT || 3000;
