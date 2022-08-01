@@ -9,6 +9,7 @@ const testSchema = require("./server/schema/types.schema");
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(
 	"/graphql",
 	graphqlHTTP({

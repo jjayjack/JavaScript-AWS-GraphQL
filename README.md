@@ -89,3 +89,5 @@ Creating a new JSON file with credentials we can connect online database to appl
 8. [MongoDB](https://www.mongodb.com/)
 
 9. [Mongoose](https://mongoosejs.com/)
+
+10. [CORS](https://www.npmjs.com/package/cors)
