@@ -53,7 +53,7 @@ var hobbiesData = [
 var postsData = [
 	{ id: "1", comment: "This is great", userId: "1" },
 	{ id: "12", comment: "Awesome", userId: "211" },
-	{ id: "120", comment: "WOWOWOW", userId: "1" },
+	{ id: "150", comment: "WOWOWOW", userId: "1" },
 	{ id: "64", comment: "My trip at the lake!", userId: "19" }
 ];
 
@@ -161,9 +161,7 @@ const Mutation = new GraphQLObjectType({
 		createUser: {
 			type: UserType,
 			args: {
-				// id: {
-				// 	type: GraphQLID
-				// },
+				// id: {type: GraphQLID},
 				name: { type: GraphQLString },
 				age: { type: GraphQLInt },
 				profession: { type: GraphQLString }
@@ -175,6 +173,38 @@ const Mutation = new GraphQLObjectType({
 					profession: args.profession
 				};
 				return user;
+			}
+		},
+		createPost: {
+			type: PostType,
+			args: {
+				// id: { type: GraphQLID },
+				comment: { type: GraphQLString },
+				userId: { type: GraphQLID }
+			},
+			resolve(parent, args) {
+				let post = {
+					comment: args.comment,
+					userId: args.userId
+				};
+				return post;
+			}
+		},
+		createHobby: {
+			type: HobbyType,
+			args: {
+				// id: {type: GraphQLID},
+				title: { type: GraphQLString },
+				description: { type: GraphQLString },
+				userId: { type: GraphQLID }
+			},
+			resolve(parent, args) {
+				let hobby = {
+					title: args.title,
+					description: args.description,
+					userId: args.userId
+				};
+				return hobby;
 			}
 		}
 	}
