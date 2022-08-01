@@ -26,6 +26,14 @@ Connected to GraphQL with objects:
 **NonNull**
 `GraphQLNonNull (YOUR_NON_NULL_FIELD)`
 
+### MongoDB & Database Management
+
+**RDBMS** Relational Database Management System:
+Contains a table structure which contains columns and rows. Focused on the _relationships_ within tables. Each table has a _primary key_ that refers to table.
+
+**MongoDB**
+Main benefit is use of _collections_ which contain different _documents_.
+
 ### Resources
 
 1. [NodeJS](https://nodejs.org/en/)
@@ -66,3 +74,5 @@ Connected to GraphQL with objects:
 6. [nodemon](https://www.npmjs.com/package/nodemon)
 
 7. [Lodash](https://lodash.com/)
+
+8. [MongoDB](https://www.mongodb.com/)
