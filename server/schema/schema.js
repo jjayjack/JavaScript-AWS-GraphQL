@@ -22,20 +22,17 @@ const UserType = new GraphQLObjectType({
 		name: { type: GraphQLString },
 		age: { type: GraphQLInt },
 		profession: { type: GraphQLString },
+
 		posts: {
 			type: new GraphQLList(PostType),
 			resolve(parent, args) {
-				return _.filter(postsData, {
-					userId: parent.id
-				});
+				return Post.find({ userId: parent.id });
 			}
 		},
 		hobbies: {
 			type: new GraphQLList(HobbyType),
 			resolve(parent, args) {
-				return _.filter(hobbiesData, {
-					userId: parent.id
-				});
+				return Hobby.find({ userId: parent.id });
 			}
 		}
 	})
