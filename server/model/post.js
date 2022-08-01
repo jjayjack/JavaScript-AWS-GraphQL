@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const MSchema = mongoose.Schema;
 mongoose.set("useFindAndModify", false);
 
-const postSchema = new MSchema({
+const postSchema = MSchema({
 	comment: String
 });
 
