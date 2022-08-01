@@ -28,4 +28,4 @@ mongoose
 			console.log("listening for requests on " + port);
 		});
 	})
-	.catch((error) => console.log(error));
+	.catch((error) => console.log("ERROR: " + error));
