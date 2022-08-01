@@ -12,7 +12,7 @@ const {
 
 var usersData = [
 	{ id: "1", name: "Dave", age: 28, profession: "Programmer" },
-	{ id: "13", name: "Anna", age: 32, profession: "Scrum mMster" },
+	{ id: "13", name: "Anna", age: 32, profession: "Scrum Master" },
 	{ id: "211", name: "Bella", age: 36, profession: "Practice Manager" },
 	{ id: "19", name: "Gina", age: 29, profession: "Human Resources" },
 	{ id: "150", name: "George", age: 26, profession: "Programmer" }
@@ -127,6 +127,12 @@ const RootQuery = new GraphQLObjectType({
 				return _.find(usersData, {
 					id: args.id
 				});
+			}
+		},
+		users: {
+			type: new GraphQLList(UserType),
+			resolve(parent, args) {
+				return usersData;
 			}
 		},
 		hobby: {
