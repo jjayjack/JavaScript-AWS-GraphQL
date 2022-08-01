@@ -10,7 +10,8 @@ const {
 	GraphQLString,
 	GraphQLInt,
 	GraphQLSchema,
-	GraphQLList
+	GraphQLList,
+	GraphQLNonNull
 } = graphql;
 
 const UserType = new GraphQLObjectType({
@@ -152,16 +153,15 @@ const Mutation = new GraphQLObjectType({
 		createPost: {
 			type: PostType,
 			args: {
-				// id: { type: GraphQLID },
-				comment: { type: GraphQLString },
-				userId: { type: GraphQLID }
+				comment: { type: new GraphQLNonNull(GraphQLString) },
+				userId: { type: new GraphQLNonNull(GraphQLID) }
 			},
 			resolve(parent, args) {
-				let post = {
+				let post = Post({
 					comment: args.comment,
 					userId: args.userId
-				};
-				return post;
+				});
+				return post.save();
 			}
 		},
 		createHobby: {
@@ -172,12 +172,12 @@ const Mutation = new GraphQLObjectType({
 				userId: { type: GraphQLID }
 			},
 			resolve(parent, args) {
-				let hobby = {
+				let hobby = Hobby({
 					title: args.title,
 					description: args.description,
 					userId: args.userId
-				};
-				return hobby;
+				});
+				return hobby.save();
 			}
 		}
 	}
