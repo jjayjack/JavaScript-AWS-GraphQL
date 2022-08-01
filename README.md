@@ -4,6 +4,25 @@
 
 Blueprint that sets up types and relationships between types
 
+### Scalar Types
+
+Connected to GraphQL with objects:
+
+**String**
+`GraphQLString`
+
+**Int**
+`GraphQLInt`
+
+**Float**
+`GraphQLFloat`
+
+**Boolean**
+`GraphQLBoolean`
+
+**ID**
+`GraphQLID`
+
 ### Resources
 
 1. [NodeJS](https://nodejs.org/en/)
