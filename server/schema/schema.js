@@ -143,7 +143,7 @@ const Mutation = new GraphQLObjectType({
 		updateUser: {
 			type: UserType,
 			args: {
-				userId: { type: GraphQLNonNull(GraphQLString) },
+				id: { type: GraphQLNonNull(GraphQLString) },
 				name: { type: GraphQLNonNull(GraphQLString) },
 				age: { type: GraphQLNonNull(GraphQLInt) },
 				profession: { type: GraphQLString }
