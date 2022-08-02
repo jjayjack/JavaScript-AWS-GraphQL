@@ -91,3 +91,11 @@ Creating a new JSON file with credentials we can connect online database to appl
 9. [Mongoose](https://mongoosejs.com/)
 
 10. [CORS](https://www.npmjs.com/package/cors)
+
+11. [Heroku](https://www.heroku.com/)
+    _Deploying Notes_
+    Within user dashboard, create a new app and follow steps with app name and location. [Create app]
+
+Choose which method to use for Deployment and follow the steps based on method.
+
+Once project has completed deployment, a new file **Procfile** will need to be created. This file tells Heroku which file to execute on runtime.
