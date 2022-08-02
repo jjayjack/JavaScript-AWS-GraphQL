@@ -103,3 +103,5 @@ Once project has completed deployment, a new file **Procfile** will need to be c
 Connecting MongoDB to Heroku can be found under Settings within App and Config Vars must be updated to be the same as used within application.
 
 https://javascript-aws-nestjs-graphql.herokuapp.com/graphql
+
+12. [GraphQL Playground](https://www.graphqlbin.com/v2/new)
