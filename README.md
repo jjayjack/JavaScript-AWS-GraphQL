@@ -99,3 +99,7 @@ Creating a new JSON file with credentials we can connect online database to appl
 Choose which method to use for Deployment and follow the steps based on method.
 
 Once project has completed deployment, a new file **Procfile** will need to be created. This file tells Heroku which file to execute on runtime.
+
+Connecting MongoDB to Heroku can be found under Settings within App and Config Vars must be updated to be the same as used within application.
+
+https://javascript-aws-nestjs-graphql.herokuapp.com/graphql
