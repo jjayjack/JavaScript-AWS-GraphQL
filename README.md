@@ -107,4 +107,21 @@ https://javascript-aws-nestjs-graphql.herokuapp.com/graphql
 12. [GraphQL Playground](https://www.graphqlbin.com/v2/new)
 
 13. [AWS AppSync](https://us-east-1.console.aws.amazon.com/appsync/home?region=us-east-1#/)
-    Create API within AWS AppSync
+
+Create API within AWS AppSync
+
+**Resolver**: Within AWS, bridge between schema & data sources that allows for mapping between the two. COnnection between front-end and back-end. Coded in VTL(Velocity template language).
+
+System Overview Architecture
+
+**Client** **->** **GraphQL** **Proxy** **->** **Database** **Storage**
+
+_GraphQL_ _Proxy_: Component that runs the GraphQL engine for processing requests and mapping them to logical functions for data operations or triggers.
+
+_Operation_: Query, Mutation and Subscriptions
+
+_Action_: A notification to connected subscribers, which is the result of a mutation
+
+_Resolver_: A function that converts the GraphQL payload to the underlying storage system protocol and executes if the caller is authorized to invoke it.
+
+_Function_: Defines a single operation that can be used across pipeline resolvers. Functions can be reused to perform redundant logic throughout the GraphQL Proxy.
