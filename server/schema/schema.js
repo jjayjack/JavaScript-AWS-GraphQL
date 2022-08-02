@@ -47,8 +47,11 @@ const HobbyType = new GraphQLObjectType({
 		description: { type: GraphQLString },
 		user: {
 			type: UserType,
+			args: {
+				id: { type: GraphQLString }
+			},
 			resolve(parent, args) {
-				return _.find(usersData, { id: parent.userId });
+				return User.find({ id: args.id });
 			}
 		}
 	})
@@ -149,7 +152,7 @@ const Mutation = new GraphQLObjectType({
 				profession: { type: GraphQLString }
 			},
 			resolve(parent, args) {
-				return (updateUser = User.findByIdAndUpdate(
+				return (updatedUser = User.findByIdAndUpdate(
 					args.id,
 					{
 						$set: {
@@ -215,12 +218,12 @@ const Mutation = new GraphQLObjectType({
 		updateHobby: {
 			type: HobbyType,
 			args: {
+				id: { type: GraphQLNonNull(GraphQLString) },
 				title: { type: GraphQLNonNull(GraphQLString) },
-				description: { type: GraphQLNonNull(GraphQLString) },
-				userId: { type: GraphQLNonNull(GraphQLID) }
+				description: { type: GraphQLNonNull(GraphQLString) }
 			},
 			resolve(parent, args) {
-				return (updateHobby = Hobby.findByIdAndUpdate(
+				return (updatedHobby = Hobby.findByIdAndUpdate(
 					args.id,
 					{
 						$set: {
