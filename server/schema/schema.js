@@ -142,8 +142,8 @@ const Mutation = new GraphQLObjectType({
 		createPost: {
 			type: PostType,
 			args: {
-				comment: { type: new GraphQLNonNull(GraphQLString) },
-				userId: { type: new GraphQLNonNull(GraphQLID) }
+				comment: { type: GraphQLNonNull(GraphQLString) },
+				userId: { type: GraphQLNonNull(GraphQLID) }
 			},
 			resolve(parent, args) {
 				let post = Post({
@@ -156,9 +156,9 @@ const Mutation = new GraphQLObjectType({
 		createHobby: {
 			type: HobbyType,
 			args: {
-				title: { type: GraphQLString },
-				description: { type: GraphQLString },
-				userId: { type: GraphQLID }
+				title: { type: GraphQLNonNull(GraphQLString) },
+				description: { type: GraphQLNonNull(GraphQLString) },
+				userId: { type: GraphQLNonNull(GraphQLID) }
 			},
 			resolve(parent, args) {
 				let hobby = Hobby({
