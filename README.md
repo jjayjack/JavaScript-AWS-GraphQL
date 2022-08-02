@@ -105,3 +105,6 @@ Connecting MongoDB to Heroku can be found under Settings within App and Config V
 https://javascript-aws-nestjs-graphql.herokuapp.com/graphql
 
 12. [GraphQL Playground](https://www.graphqlbin.com/v2/new)
+
+13. [AWS AppSync](https://us-east-1.console.aws.amazon.com/appsync/home?region=us-east-1#/)
+    Create API within AWS AppSync
