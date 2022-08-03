@@ -125,3 +125,5 @@ _Action_: A notification to connected subscribers, which is the result of a muta
 _Resolver_: A function that converts the GraphQL payload to the underlying storage system protocol and executes if the caller is authorized to invoke it.
 
 _Function_: Defines a single operation that can be used across pipeline resolvers. Functions can be reused to perform redundant logic throughout the GraphQL Proxy.
+
+14. [NextJS](https://nextjs.org/)
