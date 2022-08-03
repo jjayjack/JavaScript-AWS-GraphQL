@@ -1,4 +1,7 @@
-# JavaScript-AWS-NestJS-GraphQL
+# JavaScript-AWS-GraphQL
+
+## About
+Getting started with utilizing how to integrate JavaScript to connect GraphQL, AWS, and MongoDB for a basic SQL application. Can be accessed through link within heroku: **https://javascript-aws-nestjs-graphql.herokuapp.com/graphql** This is linked to current MongoDB for testing purposes. 
 
 ### Schema
 
@@ -125,3 +128,5 @@ _Action_: A notification to connected subscribers, which is the result of a muta
 _Resolver_: A function that converts the GraphQL payload to the underlying storage system protocol and executes if the caller is authorized to invoke it.
 
 _Function_: Defines a single operation that can be used across pipeline resolvers. Functions can be reused to perform redundant logic throughout the GraphQL Proxy.
+
+
